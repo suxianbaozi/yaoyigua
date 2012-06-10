@@ -9,5 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UILabel *currentGuaLabel;
+    UIButton *shakeButton;
+    int guaIndex;
+    NSArray *guaList;
+}
+@property (nonatomic,retain) IBOutlet UILabel *currentGuaLabel;
+@property (nonatomic,retain) IBOutlet UIButton *shakeButton;
+@property int guaIndex;
+@property (nonatomic,retain) NSArray *guaList;
 
+
+-(IBAction) shake:(id)sender;
+-(BOOL) addGuaXiang:(int)xiang;
 @end
