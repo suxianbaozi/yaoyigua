@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F539D031584BD8500D1724D /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F539D021584BD8500D1724D /* bg.png */; };
+		9F539D061584BEAC00D1724D /* taiji.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9F539D051584BEAC00D1724D /* taiji.jpg */; };
+		9F539D081584E29200D1724D /* 太极图.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F539D071584E29200D1724D /* 太极图.png */; };
 		9F63DFD5157D02B7008FD92F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F63DFD4157D02B7008FD92F /* UIKit.framework */; };
 		9F63DFD7157D02B7008FD92F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F63DFD6157D02B7008FD92F /* Foundation.framework */; };
 		9F63DFD9157D02B7008FD92F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F63DFD8157D02B7008FD92F /* CoreGraphics.framework */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F539D021584BD8500D1724D /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		9F539D051584BEAC00D1724D /* taiji.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taiji.jpg; sourceTree = "<group>"; };
+		9F539D071584E29200D1724D /* 太极图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "太极图.png"; sourceTree = "<group>"; };
 		9F63DFD0157D02B7008FD92F /* yaoyigua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yaoyigua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F63DFD4157D02B7008FD92F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9F63DFD6157D02B7008FD92F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +117,9 @@
 		9F63DFDA157D02B7008FD92F /* yaoyigua */ = {
 			isa = PBXGroup;
 			children = (
+				9F539D051584BEAC00D1724D /* taiji.jpg */,
+				9F539D071584E29200D1724D /* 太极图.png */,
+				9F539D021584BD8500D1724D /* bg.png */,
 				9F63DFE3157D02B7008FD92F /* AppDelegate.h */,
 				9F63DFE4157D02B7008FD92F /* AppDelegate.m */,
 				9F63DFE6157D02B8008FD92F /* MainStoryboard.storyboard */,
@@ -223,6 +232,9 @@
 			files = (
 				9F63DFDF157D02B7008FD92F /* InfoPlist.strings in Resources */,
 				9F63DFE8157D02B8008FD92F /* MainStoryboard.storyboard in Resources */,
+				9F539D031584BD8500D1724D /* bg.png in Resources */,
+				9F539D061584BEAC00D1724D /* taiji.jpg in Resources */,
+				9F539D081584E29200D1724D /* 太极图.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +441,7 @@
 				9F63E005157D02B8008FD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F63E006157D02B8008FD92F /* Build configuration list for PBXNativeTarget "yaoyiguaTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +450,7 @@
 				9F63E008157D02B8008FD92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

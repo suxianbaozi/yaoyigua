@@ -9,20 +9,36 @@
 #import "ViewController.h"
 
 @implementation ViewController
-@synthesize currentGuaLabel;
 @synthesize guaIndex;
 @synthesize shakeButton;
 @synthesize guaList;
-@synthesize currentXiang;
+@synthesize gua0;
+@synthesize gua1;
+@synthesize gua2;
+@synthesize gua3;
+@synthesize gua4;
+@synthesize gua5;
+@synthesize guaLabels;
 
 //摇动时候触发，控制地记挂
 - (IBAction)shake:(id)sender {
-    NSString *indexString = [[NSString alloc] initWithFormat:@"第%d挂",self.guaIndex+1];
-    currentGuaLabel.text = indexString;
-    self.guaIndex++;
+    
+    if (guaIndex==0) {
+        
+        for (UILabel *cur in guaLabels) {
+            cur.text = @"";
+        }
+    }
     NSString *stringXiang = [[NSString alloc] init];
     stringXiang = [self stringxiang:[self randomXiang]];
-    currentXiang.text = stringXiang;
+    
+    UILabel *currentLabel  = [[UILabel alloc] init];
+    currentLabel = [guaLabels objectAtIndex:guaIndex];
+    currentLabel.text = stringXiang;
+    guaIndex++;
+    if(guaIndex==6) {
+        guaIndex = 0;
+    }
 }
 
 - (NSString *)stringxiang:(int)xiang
@@ -30,7 +46,7 @@
     NSString *sx = [[NSString alloc] init];
     switch (xiang) {
         case YIN:
-            sx = @"阴";
+            sx = @"老阴";
             break;
         case 1:
             sx = @"少阴";
@@ -39,13 +55,13 @@
             sx = @"少阳";
             break;
         case 3:
-            sx = @"阳";
+            sx = @"老阳";
             break;
         default:
             sx = @"";
     }
-    NSString *result = [[NSString alloc] initWithFormat:@"%@卦",sx];
-    return result;
+    
+    return sx;
 
 }
 //随机获取一个卦象
@@ -96,13 +112,14 @@
     [super viewDidLoad];
     self.guaList = [[NSArray alloc] initWithObjects:YIN,YIN,YIN,YIN,YIN,YIN, nil];
     self.guaIndex = 0;
+    self.guaLabels = [[NSArray alloc] initWithObjects:gua0,gua1,gua2,gua3,gua4,gua5,nil];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.currentGuaLabel = nil;
+    
     self.shakeButton = nil;
     self.guaList = nil;
     // Release any retained subviews of the main view.
