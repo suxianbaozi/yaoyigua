@@ -28,8 +28,15 @@
                                     <action selector="shake:" destination="2" eventType="touchUpInside" id="rlg-zx-SZ9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="摇一下吧" lineBreakMode="tailTruncation" minimumFontSize="10" id="TaE-kd-aKY">
-                                <rect key="frame" x="126" y="127" width="68" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="摇一下吧:" lineBreakMode="tailTruncation" minimumFontSize="10" id="TaE-kd-aKY">
+                                <rect key="frame" x="53" y="127" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="MXa-3v-uZK">
+                                <rect key="frame" x="139" y="127" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,11 +47,23 @@
                     </view>
                     <connections>
                         <outlet property="currentGuaLabel" destination="TaE-kd-aKY" id="gXF-um-U3I"/>
+                        <outlet property="currentXiang" destination="MXa-3v-uZK" id="Wlr-nj-WYo"/>
                     </connections>
                 </viewController>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="shake:"/>
+                <relationship kind="outlet" name="currentGuaLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="currentXiang" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shakeButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
